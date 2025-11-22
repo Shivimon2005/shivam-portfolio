@@ -1,6 +1,5 @@
 import React from 'react';
 import { RESUME_DATA } from '../../constants';
-import { ArrowUpRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -9,13 +8,13 @@ const Hero: React.FC = () => {
         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
         Available for work
       </div>
-      
-      <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.95]">
+
+      <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.95]">
         {RESUME_DATA.role.split(' ').map((word, i) => (
           <span key={i} className="block md:inline-block mx-2">{word}</span>
         ))}
       </h1>
-      
+
       <p className="max-w-2xl text-lg md:text-xl text-ink-gray leading-relaxed">
         {RESUME_DATA.summary}
       </p>

@@ -1,14 +1,14 @@
+import { ArrowRight, ArrowUpRight, BookOpen, Code, Database, GraduationCap, Mail, MapPin, Server, Star, Terminal, Trophy } from 'lucide-react';
 import React from 'react';
-import Card from '../ui/Card';
 import { RESUME_DATA } from '../../constants';
-import { Terminal, Code, Database, Server, BookOpen, Trophy, MapPin, Star, ArrowRight, Mail, ArrowUpRight, GraduationCap } from 'lucide-react';
+import Card from '../ui/Card';
 
 const BentoGrid: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 pb-20 max-w-7xl mx-auto">
-      
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 px-4 pb-20 max-w-7xl mx-auto">
+
       {/* --- ROW 1 --- */}
-      
+
       {/* Projects Highlight (Large Box) */}
       <div className="md:col-span-7 flex flex-col h-full">
         <Card className="h-full bg-[#FAF9F6] relative group" id="projects">
@@ -26,10 +26,10 @@ const BentoGrid: React.FC = () => {
             {RESUME_DATA.projects.map((project, idx) => (
               <div key={idx} className="group/item bg-white border border-ink-black rounded-xl p-4 transition-all hover:shadow-md cursor-default">
                 <div className="flex justify-between items-start mb-2">
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <h3 className="font-bold text-lg leading-tight">{project.title}</h3>
                     {project.link && (
-                      <a 
+                      <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -47,7 +47,7 @@ const BentoGrid: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-accent-orange rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
         </Card>
       </div>
@@ -80,7 +80,7 @@ const BentoGrid: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-auto pt-8 flex items-center gap-2">
             <div className="h-[1px] bg-gray-700 flex-1"></div>
             <span className="text-xs text-gray-500 uppercase tracking-widest">Work History</span>
@@ -98,8 +98,8 @@ const BentoGrid: React.FC = () => {
                <h2 className="font-display text-3xl font-bold mb-6">Technical Arsenal</h2>
                <div className="flex flex-wrap gap-3">
                  {RESUME_DATA.skills.map((skill, idx) => (
-                   <span 
-                    key={idx} 
+                   <span
+                    key={idx}
                     className="bg-white border border-ink-black px-4 py-2 rounded-lg font-medium text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:bg-ink-black hover:text-white hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default animate-fade-in-up"
                     style={{ animationDelay: `${idx * 100}ms` }}
                     title={skill}
@@ -109,7 +109,7 @@ const BentoGrid: React.FC = () => {
                  ))}
                </div>
             </div>
-            
+
             <div className="mt-8 pt-6 border-t border-ink-black border-dashed flex justify-between items-end">
                <div>
                  <p className="font-bold text-sm mb-2">Tools & Frameworks</p>
@@ -139,7 +139,7 @@ const BentoGrid: React.FC = () => {
              </div>
              <span className="font-display font-bold text-3xl text-ink-black/20 group-hover:text-ink-black/40 transition-colors">{RESUME_DATA.education.year}</span>
            </div>
-           
+
            <div className="mt-6 relative z-10">
              <h3 className="font-bold text-xl leading-tight mb-2">{RESUME_DATA.education.institution}</h3>
              <p className="text-ink-gray text-sm font-medium">{RESUME_DATA.education.degree}</p>
@@ -178,14 +178,14 @@ const BentoGrid: React.FC = () => {
         <Card className="h-full relative overflow-hidden group min-h-[300px]" noPadding>
            {/* Background Image with Overlay */}
            <div className="absolute inset-0 bg-ink-black">
-             <img 
-               src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?q=80&w=1000&auto=format&fit=crop" 
-               alt="Naddi Castle Surroundings" 
+             <img
+               src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?q=80&w=1000&auto=format&fit=crop"
+               alt="Naddi Castle Surroundings"
                className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
            </div>
-           
+
            <div className="relative z-10 flex flex-col h-full justify-between p-6 text-white">
              <div>
                <div className="flex items-center gap-2 mb-3">

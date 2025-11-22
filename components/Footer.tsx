@@ -1,6 +1,6 @@
+import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import React from 'react';
 import { RESUME_DATA } from '../constants';
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string | undefined) => {
@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex gap-6">
            {RESUME_DATA.contact.map((contact, idx) => (
-             <a 
-               key={idx} 
-               href={contact.href} 
+             <a
+               key={idx}
+               href={contact.href}
                onClick={(e) => handleScroll(e, contact.href)}
-               className="flex items-center gap-2 text-sm font-bold text-ink-black transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-600 hover:to-pink-600"
+               className="flex items-center gap-2 text-base md:text-sm font-bold text-ink-black transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-600 hover:to-pink-600"
              >
                <span className="text-ink-black">{getIcon(contact.icon)}</span>
                <span>{contact.label}</span>

@@ -1,6 +1,6 @@
+import { Check, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
 import { RESUME_DATA } from '../../constants';
-import { Mail, Phone, MapPin, Send, Check, Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
@@ -26,22 +26,22 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="px-4 pb-20 max-w-7xl mx-auto">
-        <div className="bg-ink-black text-white rounded-3xl p-8 md:p-12 overflow-hidden relative shadow-[8px_8px_0px_0px_#EDF259] border-2 border-ink-black">
-            
+        <div className="bg-ink-black text-white rounded-3xl p-6 md:p-12 overflow-hidden relative shadow-[8px_8px_0px_0px_#EDF259] border-2 border-ink-black">
+
             <div className="grid md:grid-cols-2 gap-12 relative z-10">
                 {/* Left Side */}
                 <div className="flex flex-col justify-center">
                     <div className="mb-8">
                         <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Get in Touch</h2>
                         <p className="text-gray-400 text-lg">
-                            Have a project in mind or want to discuss automation? 
+                            Have a project in mind or want to discuss automation?
                             I'm always open to discussing new opportunities and ideas.
                         </p>
                     </div>
 
                     <div className="space-y-4">
                         {RESUME_DATA.contact.map((item, idx) => (
-                            <a 
+                            <a
                                 key={idx}
                                 href={item.href}
                                 className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all hover:translate-x-2 group"
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                             </div>
                             <h3 className="font-display text-3xl font-bold mb-2">Message Sent!</h3>
                             <p className="text-ink-gray mb-8">Thank you for reaching out. I'll get back to you shortly.</p>
-                            <button 
+                            <button
                                 onClick={() => setFormStatus('idle')}
                                 className="text-sm font-bold underline hover:text-accent-orange transition-colors"
                             >
@@ -77,11 +77,11 @@ const Contact: React.FC = () => {
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-5">
                             <h3 className="font-display text-2xl font-bold mb-2">Send a Message</h3>
-                            
+
                             <div className="space-y-1">
                                 <label htmlFor="name" className="text-sm font-bold ml-1">Name</label>
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     id="name"
                                     required
                                     className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-ink-black focus:ring-0 outline-none transition-all"
@@ -91,8 +91,8 @@ const Contact: React.FC = () => {
 
                             <div className="space-y-1">
                                 <label htmlFor="email" className="text-sm font-bold ml-1">Email</label>
-                                <input 
-                                    type="email" 
+                                <input
+                                    type="email"
                                     id="email"
                                     required
                                     className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-ink-black focus:ring-0 outline-none transition-all"
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
 
                              <div className="space-y-1">
                                 <label htmlFor="message" className="text-sm font-bold ml-1">Message</label>
-                                <textarea 
+                                <textarea
                                     id="message"
                                     required
                                     rows={4}
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                                 ></textarea>
                             </div>
 
-                            <button 
+                            <button
                                 type="submit"
                                 disabled={formStatus === 'submitting'}
                                 className="w-full bg-ink-black text-white py-4 rounded-xl font-bold text-lg shadow-[4px_4px_0px_0px_#EDF259] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#EDF259] active:translate-y-[0px] active:shadow-[0px_0px_0px_0px_#EDF259] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"

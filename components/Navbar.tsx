@@ -36,9 +36,9 @@ const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
               className="text-sm font-medium text-ink-black hover:underline underline-offset-4 decoration-2"
             >
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <a 
+          <a
             href="mailto:s.ksharma30189@gmail.com"
             className="bg-accent-yellow border border-ink-black px-6 py-2 rounded-full text-sm font-bold hover:bg-yellow-400 transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none"
           >
@@ -58,8 +58,8 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden p-1" 
+        <button
+          className="md:hidden p-1"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -68,18 +68,18 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="mt-2 bg-card-bg border border-ink-black rounded-2xl p-4 md:hidden flex flex-col gap-4 absolute z-50 left-4 right-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        <div className="mt-2 bg-card-bg border border-ink-black rounded-2xl p-4 md:hidden flex flex-col gap-4 absolute z-50 left-4 right-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] animate-in slide-in-from-top-2 duration-200">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
               className="text-lg font-medium text-center py-2 border-b border-gray-100 last:border-none"
             >
               {link.name}
             </a>
           ))}
-          <a 
+          <a
             href="mailto:s.ksharma30189@gmail.com"
             className="bg-accent-yellow text-center border border-ink-black px-6 py-3 rounded-full font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
           >

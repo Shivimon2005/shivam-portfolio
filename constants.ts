@@ -23,6 +23,12 @@ export const RESUME_DATA = {
                     ]
     },
     {
+            company: "Vidhima Construction Pvt. Ltd.",
+            role: "Business Development Associate",
+            period: "Dec 2025 - Present",
+            details: []
+    },
+    {
       company: "Xperi Inc.",
       role: "Automation Software Engineer",
       period: "Aug 2022 - Dec 2023",

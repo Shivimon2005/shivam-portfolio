@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import ContactModal from './ContactModal';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -20,6 +22,11 @@ const Navbar: React.FC = () => {
         setIsOpen(false);
       }
     }
+  };
+
+  const openContact = () => {
+    setIsContactOpen(true);
+    setIsOpen(false);
   };
 
   return (
@@ -49,14 +56,13 @@ const Navbar: React.FC = () => {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <a
-            href="https://wa.me/918628989364?text=Hi%20Shivam%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect."
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openContact}
             className="bg-accent-yellow border border-ink-black px-6 py-2 rounded-full text-sm font-bold hover:bg-yellow-400 transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none"
           >
             Get in touch
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,16 +87,17 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <a
-            href="https://wa.me/918628989364?text=Hi%20Shivam%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect."
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openContact}
             className="bg-accent-yellow text-center border border-ink-black px-6 py-3 rounded-full font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
           >
             Get in touch
-          </a>
+          </button>
         </div>
       )}
+
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </nav>
   );
 };

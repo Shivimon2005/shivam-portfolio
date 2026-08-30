@@ -50,7 +50,9 @@ const Navbar: React.FC = () => {
         {/* CTA */}
         <div className="hidden md:block">
           <a
-            href="mailto:s.ksharma30189@gmail.com"
+            href="https://wa.me/918628989364"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-accent-yellow border border-ink-black px-6 py-2 rounded-full text-sm font-bold hover:bg-yellow-400 transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none"
           >
             Get in touch
@@ -80,7 +82,9 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="mailto:s.ksharma30189@gmail.com"
+            href="https://wa.me/918628989364"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-accent-yellow text-center border border-ink-black px-6 py-3 rounded-full font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
           >
             Get in touch

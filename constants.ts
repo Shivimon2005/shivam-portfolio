@@ -4,7 +4,7 @@ export const RESUME_DATA = {
   name: "Shivam",
   role: "Automation Software Engineer",
   location: "Naddi, Dharamshala",
-  summary: "Software engineer with experience in automation testing, skilled in platforms like Jenkins and Docker. Enhanced Python automation libraries and integrated them into feature services, improving testing efficiency. Aiming to leverage technical skills and collaborative abilities to drive quality assurance.",
+    summary: "Founder of Daemon Labs (coming soon) and automation software engineer with experience in automation testing, skilled in platforms like Jenkins and Docker. Enhanced Python automation libraries and integrated them into feature services, improving testing efficiency. Aiming to leverage technical skills and collaborative abilities to drive quality assurance.",
   
   contact: [
     { label: "Phone", value: "8628989364", icon: "phone", href: "tel:+918628989364" },
@@ -14,6 +14,14 @@ export const RESUME_DATA = {
   ] as Social[],
 
   experience: [
+    {
+            company: "Daemon Labs",
+            role: "Founder",
+            period: "Coming Soon",
+            details: [
+                      "Building Daemon Labs — coming soon."
+                    ]
+    },
     {
       company: "Xperi Inc.",
       role: "Automation Software Engineer",
